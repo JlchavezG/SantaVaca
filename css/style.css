@@ -7,13 +7,10 @@ This file contains the styling for the actual theme, this
 is the file you need to edit to change the look of the
 theme.
 ---------------------------------------------------- */
-/*=====================================================================
+/*
 @Template Name: Medicare Medical
 @Author: Naim LAsker
 @Developed By: Naim LAsker
-
-
-=====================================================================*/
 /*----------------------------------------------------*/
 /*font Variables*/
 /*Color Variables*/
@@ -113,7 +110,7 @@ button:focus {
 .lite_bg {
   background: #f9f9f9; }
 
-/* Main Title Area css
+/* estilo para el titulo del área
 ============================================================================================ */
 .main_title {
   text-align: center;
@@ -127,9 +124,9 @@ button:focus {
     margin-bottom: 0px;
     font-weight: 300; }
 
-/* End Main Title Area css
+/* Fin del estilo de el área
 ============================================================================================ */
-/* Start Gradient Area css
+/* Estilo del Gradiente de la pagina
 ============================================================================================ */
 .gradient-bg, .categories_post:hover .categories_details, .blog_right_sidebar .widget_title, .blog_right_sidebar .search_widget .input-group .form-control, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .contact_form .primary-btn {
   background: -webkit-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
@@ -154,9 +151,9 @@ button:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-/* End Gradient Area css
+/* Termina el estilo del gradiente de la pagina
 ============================================================================================ */
-/* Start Buttons Area css
+/* Estilos de los Botones css
 ============================================================================================ */
 .primary-btn {
   position: relative;
@@ -169,7 +166,7 @@ button:focus {
   font-size: 12px;
   font-weight: 500;
   line-height: 50px;
-  border: 1px solid #f42f2c;
+  border: 1px solid #088A08;
   border-radius: 2px;
   outline: none !important;
   text-align: center;
@@ -180,13 +177,13 @@ button:focus {
   transition: all 0.3s ease 0s; }
   .primary-btn:hover {
     color: #fff;
-    box-shadow: 0 20px 20px rgba(244, 47, 44, 0.1);
+    box-shadow: 0 20px 20px rgba(61, 104, 36, .5);
     border: 1px solid transparent;
-    background: #f42f2c; }
+    background: #088A08; }
 
-/* End Buttons Area css
+/* Termina estilo de los botones
 ============================================================================================ */
-/* Start Overlay css
+/* Maqueta del Overlay css
 ============================================================================================ */
 .overlay {
   position: relative; }
@@ -200,9 +197,9 @@ button:focus {
   content: "";
   z-index: -1; }
 
-/* End Overlay css
+/* Termina Overlay css
 ============================================================================================ */
-/* Start Video Play css
+/* Seccion del video Play css
 ============================================================================================ */
 .video-play-button {
   position: relative;
@@ -305,9 +302,10 @@ button:focus {
     -o-transform: translate(-50%, -50%) translateZ(0) scale(1.5);
     transform: translate(-50%, -50%) translateZ(0) scale(1.5);
     opacity: 0.1; } }
-/* End Video Play css
+
+/* Termina sección Video Play css
 ============================================================================================ */
-/*---------------------------------------------------- */
+/*-------------- Estilos del Menu ------------------- */
 /*----------------------------------------------------*/
 .menu-trigger {
   display: inline-block;
@@ -395,9 +393,9 @@ button:focus {
             -o-transition: all 0.3s ease 0s;
             transition: all 0.3s ease 0s; }
           .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item .nav-link:hover, .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item .nav-link.active {
-            background: #f42f2c;
+            background: #0B610B;
             color: #fff;
-            box-shadow: 0 20px 20px rgba(244, 47, 44, 0.1); }
+            box-shadow: 0 10px 10px rgba(61, 104, 36, .5); }
             .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item .nav-link:hover img, .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item .nav-link.active img {
               filter: brightness(0) invert(1);
               -o-filter: brightness(0) invert(1);
@@ -407,7 +405,7 @@ button:focus {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-/* Home Banner Area css
+/* Inicio area del Banner
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
@@ -570,9 +568,9 @@ button:focus {
         .banner_content .page-link-wrap .page_link a:last-child:before {
           display: none; }
 
-/* End Home Banner Area css
+/* Termina la seccion de inicio Banner
 ============================================================================================ */
-/* Start Blog Banner Area css
+/* Inicia seccion del blog
 ============================================================================================ */
 .blog_banner {
   min-height: 780px;
@@ -614,7 +612,7 @@ button:focus {
         line-height: 42px;
         padding: 0px 45px; }
 
-/* End Blog Banner Area css
+/* Termina estilo del blog
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -644,9 +642,9 @@ button:focus {
     left: -20%;
     bottom: 0; }
 
-/* End Breakfast Area css
+/* Termina el estilo de Breakfast css
 ============================================================================================ */
-/* Start Lunch Area css
+/* Inicia estilos de  Lunch css
 ============================================================================================ */
 .breakfast-area.lunch-area .right-img {
   position: relative; }
@@ -670,9 +668,9 @@ button:focus {
       text-transform: uppercase;
       font-size: 12px; }
 
-/* End Lunch Area css
+/*Termina estilo Lunch Area css
 ============================================================================================ */
-/* Start reservation Area css
+/* Inicia estilo de reservation css
 ============================================================================================ */
 .reservation-area {
   background: url(../img/reservation-bg.jpg) center no-repeat;
@@ -725,9 +723,9 @@ button:focus {
     #book-table .reservation-area {
       margin-top: 80px; } }
 
-/* End reservation Area css
+/* Terminan estilos de reservation css
 ============================================================================================ */
-/* Start Chef Area css
+/* Inicia estilos de Chef css
 ============================================================================================ */
 .chef-area .left-content {
   padding-right: 16%;
@@ -748,9 +746,9 @@ button:focus {
     .chef-area .chef-items {
       display: none; } }
 
-/* End Chef Area css
+/* Terminan estilos Chef css
 ============================================================================================ */
-/* Start Food Gallery Area css
+/* Inicia estilos de la galeria de cortes css
 ============================================================================================ */
 .food-gallery-area {
   margin-bottom: 70px; }
@@ -777,9 +775,9 @@ button:focus {
     .active-food-gallery .owl-nav div:hover {
       opacity: 1; }
 
-/* End Food Gallery Area css
+/* Terminan estilos de la galeria de cortes css
 ============================================================================================ */
-/* Start Brands Area css
+/* Inicia estilos de  Brands  css
 ============================================================================================ */
 .single-brand-item {
   margin: 0 auto; }
@@ -793,11 +791,11 @@ button:focus {
     .single-brand-item img:hover {
       opacity: .8; }
 
-/* End Brands Area css
+/* Terminan estilos Brands Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-/* Menu List Area css
+/* Estilos del Menu Lista css
 ============================================================================================ */
 .menu_inner .col-lg-5 .menu_list:last-child {
   margin-bottom: 0; }
@@ -843,7 +841,7 @@ button:focus {
       .menu_inner .menu_list .list li p {
         font-size: 14px; } }
 
-/* End Menu List Area css
+/* Termiann estilos del Menu List Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
