@@ -15,7 +15,7 @@ theme.
 /*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
-@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,500");
+@import url("@import url('https://fonts.googleapis.com/css?family=Allura|Open+Sans&display=swap");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -65,14 +65,14 @@ a {
 body {
   line-height: 28px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #777777; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Pacifico", cursive;
+  font-family: "Allura", cursive;;
   font-weight: 400;
-  color: #222222; }
+  color: #088A08; }
 
 button:focus {
   outline: none;
@@ -161,7 +161,7 @@ button:focus {
   padding: 0px 30px;
   color: #222222;
   background: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 500;
@@ -450,7 +450,7 @@ button:focus {
       padding-left: 15px; }
       .banner-bottom .video-popup .watch h6 {
         font-size: 16px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 500;
         color: #fff;
         text-transform: uppercase;
@@ -464,7 +464,7 @@ button:focus {
         padding: 80px 70px; } }
     @media (max-width: 991px) {
       .banner-bottom .banner_content {
-        padding: 80px 30px; } }
+        padding: 60px 30px; } }
     .banner-bottom .banner_content .top-text {
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -539,7 +539,7 @@ button:focus {
     .banner_content .page-link-wrap {
       margin-top: 30px; } }
   .banner_content .page-link-wrap .page_link {
-    background: #f42f2c;
+    background: #0B610B;
     text-align: center;
     line-height: 50px;
     color: #fff;
@@ -552,7 +552,7 @@ button:focus {
     .banner_content .page-link-wrap .page_link a {
       font-size: 14px;
       color: #fff;
-      font-family: "Roboto", sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-right: 30px;
       position: relative;
       text-transform: capitalize; }
@@ -602,7 +602,7 @@ button:focus {
       .blog_banner .banner_inner .blog_b_text h2 {
         font-size: 60px;
         font-weight: 500;
-        font-family: "Roboto", sans-serif;
+        font-family: "Open Sans", sans-serif;
         line-height: 66px;
         margin-bottom: 15px; }
       .blog_banner .banner_inner .blog_b_text p {
@@ -710,9 +710,9 @@ button:focus {
       font-size: 13px;
       height: 50px; }
       .reservation-area .contact-form-section .form-select .nice-select .list .option.selected {
-        color: #f42f2c; }
+        color: #0B610B; }
       .reservation-area .contact-form-section .form-select .nice-select .list .option:hover {
-        color: #f42f2c; }
+        color: #0B610B; }
     @media (max-width: 340px) {
       .reservation-area .contact-form-section .primary-btn {
         padding: 0 25px; } }
@@ -844,8 +844,7 @@ button:focus {
 /* Termiann estilos del Menu List Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/*================= latest_blog_area css =============*/
+/*-----------------Estilos del Blog Css----------------*/
 .latest_blog_area {
   background: #f9f9ff; }
 
@@ -880,11 +879,11 @@ button:focus {
   text-align: center;
   color: #222222; }
   .tags .tag_btn:before {
-    background: #f42f2c; }
+    background: #0B610B; }
   .tags .tag_btn + .tag_btn {
     margin-left: 2px; }
 
-/*========= blog_categorie_area css ===========*/
+/*========= Estilos blog_categorie_area css ===========*/
 .blog_categorie_area {
   padding-top: 80px;
   padding-bottom: 80px; }
@@ -928,7 +927,7 @@ button:focus {
     background-color: transparent;
     opacity: .5; }
 
-/*============ blog_left_sidebar css ==============*/
+/*============ Estilos blog_left_sidebar css ==============*/
 .blog_item {
   margin-bottom: 40px; }
 
@@ -937,14 +936,14 @@ button:focus {
   .blog_info .post_tag {
     padding-bottom: 20px; }
     .blog_info .post_tag a {
-      font: 300 14px/21px "Roboto", sans-serif;
+      font: 300 14px/21px "Open Sans", sans-serif;
       color: #222222; }
       .blog_info .post_tag a:hover {
         color: #777777; }
       .blog_info .post_tag a.active {
-        color: #f42f2c; }
+        color: #0B610B; }
   .blog_info .blog_meta li a {
-    font: 300 14px/20px "Roboto", sans-serif;
+    font: 300 14px/20px "Open Sans", sans-serif;
     color: #777777;
     vertical-align: middle;
     padding-bottom: 12px;
@@ -957,7 +956,7 @@ button:focus {
       line-height: 20px;
       vertical-align: middle; }
     .blog_info .blog_meta li a:hover {
-      color: #f42f2c; }
+      color: #0B610B; }
 
 .blog_post img {
   max-width: 100%; }
@@ -971,7 +970,7 @@ button:focus {
     font-weight: 600;
     transition: all 0.3s linear; }
     .blog_details h2:hover {
-      color: #f42f2c; }
+      color: #0B610B; }
   .blog_details p {
     margin-bottom: 26px; }
 
@@ -1045,7 +1044,7 @@ button:focus {
         .blog_right_sidebar .author_widget .social_icon a + a {
           margin-left: 20px; }
         .blog_right_sidebar .author_widget .social_icon a:hover {
-          color: #f42f2c; }
+          color: #0B610B; }
   .blog_right_sidebar .popular_post_widget .post_item .media-body {
     justify-content: center;
     align-self: center;
@@ -1057,7 +1056,7 @@ button:focus {
       margin-bottom: 4px;
       transition: all 0.3s linear; }
       .blog_right_sidebar .popular_post_widget .post_item .media-body h3:hover {
-        color: #f42f2c; }
+        color: #0B610B; }
     .blog_right_sidebar .popular_post_widget .post_item .media-body p {
       font-size: 12px;
       line-height: 21px;
@@ -1077,9 +1076,9 @@ button:focus {
     .blog_right_sidebar .post_category_widget .cat-list li + li {
       padding-top: 15px; }
     .blog_right_sidebar .post_category_widget .cat-list li:hover {
-      border-color: #f42f2c; }
+      border-color: #0B610B; }
       .blog_right_sidebar .post_category_widget .cat-list li:hover a {
-        color: #f42f2c; }
+        color: #0B610B; }
   .blog_right_sidebar .newsletter_widget {
     text-align: center; }
     .blog_right_sidebar .newsletter_widget .form-group {
@@ -1179,7 +1178,7 @@ button:focus {
   text-decoration: none;
   border-color: #eee; }
 
-/*============ Start Blog Single Styles  =============*/
+/*============ Inicia Blog Single Styles  =============*/
 .single-post-area .social-links {
   padding-top: 10px; }
   .single-post-area .social-links li {
@@ -1324,7 +1323,7 @@ button:focus {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
     .comments-area .btn-reply:hover {
-      background-color: #f42f2c;
+      background-color: #0B610B;
       color: #fff; }
 
 .comment-form {
@@ -1381,7 +1380,7 @@ button:focus {
     font-size: 13px;
     color: #777; }
 
-/*============ End Blog Single Styles  =============*/
+/*============ Termina Blog Single Styles  =============*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============== contact_area css ================*/
@@ -1398,12 +1397,12 @@ button:focus {
     top: 0;
     font-size: 20px;
     line-height: 24px;
-    color: #f42f2c;
+    color: #0B610B;
     font-weight: 600; }
   .contact_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
-    color: "Roboto", sans-serif;
+    color: "Open Sans", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #222222; }
@@ -1421,7 +1420,7 @@ button:focus {
     line-height: 26px;
     color: #999;
     border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     border-radius: 0px;
     padding-left: 20px; }
     .contact_form .form-group .form-control:focus {
@@ -1453,7 +1452,7 @@ button:focus {
       background: #f4f8ff;
       border: 1px solid #eeeeee; }
 
-/* Contact Success and error Area css
+/* Contacto correcto y error css
 ============================================================================================ */
 .modal-message .modal-dialog {
   position: absolute;
@@ -1480,13 +1479,13 @@ button:focus {
     .modal-message .modal-dialog .modal-content .modal-header h2 {
       display: block;
       text-align: center;
-      color: #f42f2c;
+      color: #0B610B;
       padding-bottom: 10px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Open Sans", sans-serif; }
     .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
-/* End Contact Success and error Area css
+/* Termina estilos de  Contacto correcto y error  css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -1505,23 +1504,23 @@ button:focus {
     line-height: 26px; }
     .sample-text-area p b {
       font-weight: bold;
-      color: #f42f2c; }
+      color: #0B610B; }
     .sample-text-area p i {
-      color: #f42f2c;
+      color: #0B610B;
       font-style: italic; }
     .sample-text-area p sup {
-      color: #f42f2c;
+      color: #0B610B;
       font-style: italic; }
     .sample-text-area p sub {
-      color: #f42f2c;
+      color: #0B610B;
       font-style: italic; }
     .sample-text-area p del {
-      color: #f42f2c; }
+      color: #0B610B; }
     .sample-text-area p u {
-      color: #f42f2c; }
+      color: #0B610B; }
 
-/*============== End Elements Area css ================*/
-/*==============Elements Button Area css ================*/
+/*============== Termina estilo de  Elementos css ================*/
+/*==============Elementos Button css ================*/
 .elements_button .title_color {
   margin-bottom: 30px;
   color: #222222; }
@@ -1651,11 +1650,11 @@ button:focus {
   padding-top: 0px;
   padding-bottom: 0px; }
 
-/*==============End Elements Button Area css ================*/
+/*============== Terminan Elementos Button  css ================*/
 /* =================================== */
-/*  Elements Page Styles
+/*  Elementos de la Pagina y sus Estilos
 /* =================================== */
-/*---------- Start Elements Page -------------*/
+/*---------- Inicia Elements Page -------------*/
 .generic-banner {
   margin-top: 60px;
   text-align: center; }
@@ -1702,7 +1701,7 @@ button:focus {
 .switch-wrap p {
   margin: 0; }
 
-/*---------- End Elements Page -------------*/
+/*---------- Terminan estilos de los  Elementos de la Pagina -------------*/
 .sample-text-area {
   padding: 100px 0 70px 0; }
 
@@ -2690,7 +2689,7 @@ h6 {
   line-height: 40px;
   padding: 0px 28px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
@@ -2708,7 +2707,7 @@ h6 {
   padding: 0px 32px;
   font-size: 13px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #222222;
   line-height: 34px;
   display: inline-block; }
@@ -2771,7 +2770,7 @@ h6 {
   color: #fff;
   display: inline-block; }
   .social-icons a:hover {
-    background: #f42f2c; }
+    background: #088A08; }
 .social-icons i {
   color: #ffffff;
   -webkit-transition: all 0.3s ease 0s;
@@ -2821,7 +2820,7 @@ h6 {
   .single-footer-widget .list li a:hover {
     color: #fff; }
 .single-footer-widget .bb-btn {
-  background: #f42f2c;
+  background: #088A08;
   color: #fff;
   font-weight: 300;
   border-radius: 0;
@@ -2837,7 +2836,7 @@ h6 {
   .single-footer-widget .info.error {
     color: red; }
 .single-footer-widget .click-btn {
-  background: #f42f2c;
+  background: #088A08;
   color: #fff;
   border-radius: 0;
   border-top-left-radius: 0px;
@@ -2875,7 +2874,7 @@ h6 {
   font-weight: 300; }
 
 .footer-text a, .footer-text i {
-  color: #f42f2c; }
+  color: #088A08; }
 
 #book-table .footer-area {
   margin-top: 300px; }
