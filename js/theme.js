@@ -12,10 +12,10 @@
     $(".fitscreen").css("height", fitscreen);
     var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
 	-------------------------------------------------------------------------------*/
 
-    //* Navbar Fixed  
+    //* Navbar Fixed
     function navbarFixed() {
         if ($('.header_area').length) {
             $(window).scroll(function () {
@@ -55,7 +55,7 @@
         $(".menu-trigger").show('slow');
         $(".fixed-menu").removeClass("active");
     });
-        
+
 
     /*----------------------------------------------------*/
     /*  MailChimp Slider
@@ -68,7 +68,7 @@
     $('select').niceSelect();
 
     /*----------------------------------------------------*/
-    /*  Datepicker 
+    /*  Datepicker
     /*----------------------------------------------------*/
     $("#datepicker").datepicker({
         showOn: 'button',
@@ -138,7 +138,7 @@
 
 
     /*-------------------------------------------------------------------------------
-    Brand Slider 
+    Brand Slider
 	-------------------------------------------------------------------------------*/
     $(".brand-carousel").owlCarousel({
         items: 1,
@@ -183,8 +183,8 @@
             lat: $lat,
             lng: $lon,
             scrollwheel: false,
-            scaleControl: true,
-            streetViewControl: false,
+            scaleControl: false,
+            streetViewControl: true,
             panControl: true,
             disableDoubleClickZoom: true,
             mapTypeControl: false,
@@ -394,8 +394,8 @@
             lat: $lat,
             lng: $lon,
             scrollwheel: false,
-            scaleControl: true,
-            streetViewControl: false,
+            scaleControl: false,
+            streetViewControl: true,
             panControl: true,
             disableDoubleClickZoom: true,
             mapTypeControl: false,

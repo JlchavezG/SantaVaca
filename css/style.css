@@ -457,7 +457,7 @@ button:focus {
         letter-spacing: 2px;
         margin: 0; }
   .banner-bottom .banner_content {
-    background: #fff;
+    background: rgba(0, 0, 0, 0.5);
     padding: 90px 70px; }
     @media (max-width: 991px) {
       .banner-bottom .banner_content {
