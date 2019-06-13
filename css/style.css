@@ -15,7 +15,7 @@ theme.
 /*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
-@import url("@import url('https://fonts.googleapis.com/css?family=Allura|Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Montserrat&display=swap');
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -65,12 +65,12 @@ a {
 body {
   line-height: 28px;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #777777; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Allura", cursive;;
+  font-family: "Bad Script", cursive;
   font-weight: 400;
   color: #088A08; }
 
@@ -129,25 +129,25 @@ button:focus {
 /* Estilo del Gradiente de la pagina
 ============================================================================================ */
 .gradient-bg, .categories_post:hover .categories_details, .blog_right_sidebar .widget_title, .blog_right_sidebar .search_widget .input-group .form-control, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .contact_form .primary-btn {
-  background: -webkit-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -moz-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -ms-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -o-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: linear-gradient(90deg, #f42f2c 0%, #f48464 100%); }
+  background: -webkit-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -moz-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -ms-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -o-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: linear-gradient(90deg, #088A08 0%, #088A09 100%); }
 
 .gradient-bg2 {
-  background: -webkit-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -moz-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -ms-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -o-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: linear-gradient(90deg, #f42f2c 0%, #f48464 100%); }
+  background: -webkit-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -moz-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -ms-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -o-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: linear-gradient(90deg, #088A08 0%, #088A09 100%); }
 
 .gradient-color {
-  background: -webkit-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -moz-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -ms-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: -o-linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
-  background: linear-gradient(90deg, #f42f2c 0%, #f48464 100%);
+  background: -webkit-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -moz-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -ms-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: -o-linear-gradient(90deg, #088A08 0%, #088A09 100%);
+  background: linear-gradient(90deg, #088A08 0%, #088A09 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -161,7 +161,7 @@ button:focus {
   padding: 0px 30px;
   color: #222222;
   background: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 500;
@@ -317,7 +317,7 @@ button:focus {
   .menu-trigger span {
     height: 5px;
     width: 30px;
-    background: #222222;
+    background: #fff;
     display: block;
     margin: 4px;
     border-radius: 2px; }
@@ -327,7 +327,7 @@ button:focus {
   @media (max-width: 570px) {
     .menu-trigger {
       display: block;
-      background: #fff;
+      background:rgba(0,0,0,.5);
       padding: 10px; } }
 
 .fixed-menu {
@@ -372,7 +372,7 @@ button:focus {
         display: block; }
         .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item.submenu .dropdown-menu {
           border: none;
-          margin-left: 30px; }
+          margin-left: 15px; }
           .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item.submenu .dropdown-menu .nav-item {
             padding: 0; }
         .fixed-menu .nav-wraper .navbar .navbar-nav .nav-item .nav-link {
@@ -404,6 +404,102 @@ button:focus {
               -webkit-filter: brightness(0) invert(1); }
 
 /*---------------------------------------------------- */
+/*-- boton flotante --*/
+.flotante {
+    display:scroll;
+        position:fixed;
+        bottom:90px;
+        left: 10px;
+        z-index: 1000;
+      }
+
+/*--- boton arriba --*/
+.ir-arriba{
+  display:none;
+  background-repeat:no-repeat;
+  font-size:20px;
+  color:black;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  right:150px;
+  z-index:2;
+}
+  @media (max-width: 570px) {
+    .ir-arriba{
+      display:none;
+      background-repeat:no-repeat;
+      font-size:20px;
+      color:black;
+      cursor:pointer;
+      position:fixed;
+      bottom:10px;
+      right:20px;
+      z-index:2;
+}
+}
+/*--- termina boton arriba --*/
+/*--- inicia div verde --*/
+.sec1 {
+    margin-top: -39px;
+    background: #088A08;
+    padding: 100px 0;
+    position: relative;
+}
+
+.sec2 {
+    background: white;
+    position: relative;
+}
+
+.sec2::before {
+    content: '';
+    left: 0;
+    width: 50%;
+    height: 150px;
+    position: absolute;
+    top: -70px;
+    background: white;
+    transform: skewY(8deg);
+    color: #000;
+}
+
+.sec2::after {
+    content: '';
+    width: 50%;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    background: white;
+    transform: skewY(-8deg);
+    color: #000;
+}
+
+.boxy {
+    padding: 10px 10px;
+}
+
+.boxy p {
+    width: 60%;
+}
+/*-- inicia estilo div horizontal --*/
+.diagonal {
+	color: #fff;
+	margin-top: 100px;
+	padding: 50px 0;
+ 	position: relative;
+ 	background: black;
+}
+.diagonal:before {
+ 	position: absolute;
+ 	margin-top: -130px;
+ 	content: '';
+ 	border-style: solid;
+	border-width: 0 0 5rem 100vw;
+	border-color: transparent black black transparent;
+ }
+/*-- termina div horizontal --*/
 /*----------------------------------------------------*/
 /* Inicio area del Banner
 ============================================================================================ */
@@ -419,7 +515,7 @@ button:focus {
       height: 394px !important; } }
   .home_banner_area.overlay:after {
     background: #000;
-    opacity: .2; }
+    opacity: 1; }
 
 .banner-bottom {
   margin-top: -340px; }
@@ -450,15 +546,16 @@ button:focus {
       padding-left: 15px; }
       .banner-bottom .video-popup .watch h6 {
         font-size: 16px;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0; }
   .banner-bottom .banner_content {
-    background: #fff;
-    padding: 90px 70px; }
+    background:rgba(255,255,255,.8);
+    padding: 20px;
+  }
     @media (max-width: 991px) {
       .banner-bottom .banner_content {
         padding: 80px 70px; } }
@@ -552,7 +649,7 @@ button:focus {
     .banner_content .page-link-wrap .page_link a {
       font-size: 14px;
       color: #fff;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Montserrat", sans-serif;
       margin-right: 30px;
       position: relative;
       text-transform: capitalize; }
@@ -603,7 +700,7 @@ button:focus {
       .blog_banner .banner_inner .blog_b_text h2 {
         font-size: 60px;
         font-weight: 500;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Montserrat", sans-serif;
         line-height: 66px;
         margin-bottom: 15px; }
       .blog_banner .banner_inner .blog_b_text p {
@@ -615,6 +712,22 @@ button:focus {
 
 /* Termina estilo del blog
 ============================================================================================ */
+
+/* paralax */
+.parallax {
+  /* The image used */
+  background-image: url("../img/paralax.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .site-main {
@@ -638,7 +751,11 @@ button:focus {
 }
 .text{
   color: #fff;
-  font-family:monospace;
+  font-size: 17px;
+  font-family:"Montserrat", sans-serif;
+  background: transparent;
+  cursor: pointer;
+  border: none;
 }
 .right-img {
   position: relative; }
@@ -655,7 +772,8 @@ button:focus {
 /* Inicia estilos de  Lunch css
 ============================================================================================ */
 .breakfast-area.lunch-area .right-img {
-  position: relative; }
+  position: relative;
+   }
   .breakfast-area.lunch-area .right-img .img2 {
     position: absolute;
     left: 20%;
@@ -725,11 +843,11 @@ button:focus {
       .reservation-area .contact-form-section .primary-btn {
         padding: 0 25px; } }
 
-#book-table .reservation-area {
-  margin-top: 150px; }
-  @media (max-width: 991px) {
     #book-table .reservation-area {
-      margin-top: 80px; } }
+    margin-top: 150px; }
+    @media (max-width: 991px) {
+    #book-table .reservation-area {
+    margin-top: 80px; } }
 
 /* Terminan estilos de reservation css
 ============================================================================================ */
@@ -1391,6 +1509,9 @@ button:focus {
 /*============ Termina Blog Single Styles  =============*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+
+
+
 /*============== contact_area css ================*/
 .mapBox {
   height: 420px;
@@ -1448,8 +1569,8 @@ button:focus {
       height: 134px; }
 .contact_form .primary-btn {
   margin-top: 20px;
-  border: 0;
-  border-radius: 50px;
+  border: 2px solid ;
+  border-radius: 2px;
   color: #fff; }
   .contact_form .primary-btn:after {
     border-radius: 50px; }
@@ -1730,7 +1851,7 @@ button:focus {
   .element-wrap {
     margin-top: 30px; } }
 b, sup, sub, u, del {
-  color: #f8b600; }
+  color: #0B610B; }
 
 h1 {
   font-size: 36px; }
@@ -2736,7 +2857,7 @@ h6 {
   padding: 100px 0; }
   .footer-area.overlay:after {
     background: #000000;
-    opacity: .75; }
+    opacity: .5; }
   .footer-area h6 {
     color: #fff;
     margin-bottom: 25px;
@@ -2756,7 +2877,7 @@ h6 {
       text-align: center; } }
 
 .copy-right-text i, .copy-right-text a {
-  color: #f42f2c; }
+  color: #fff; }
 
 .instafeed {
   margin: -5px; }
@@ -2770,8 +2891,9 @@ h6 {
   .social-icons {
     margin-top: 30px; } }
 .social-icons a {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
   line-height: 30px;
   text-align: center;
   background: rgba(255, 255, 255, 0.15);
