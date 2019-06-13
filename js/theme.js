@@ -187,7 +187,7 @@
             streetViewControl: true,
             panControl: true,
             disableDoubleClickZoom: true,
-            mapTypeControl: false,
+            mapTypeControl: true,
             zoom: $zoom,
             styles: [
                 {
@@ -398,7 +398,7 @@
             streetViewControl: true,
             panControl: true,
             disableDoubleClickZoom: true,
-            mapTypeControl: false,
+            mapTypeControl: true,
             zoom: $zoom,
             styles: [
                 {
