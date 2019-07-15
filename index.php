@@ -1,3 +1,20 @@
+<?php
+    // conexion a la bd
+    require 'conect/conecta.php';
+    error_reporting(E_ERROR);
+
+   // inicia la insercion de datos para el registro de ofertas
+    if (!empty($_POST['submit'])) {
+      $nombre = $mysqli->real_escape_string($_POST['nombre']);
+      $email = $mysqli->real_escape_string($_POST['email']);
+      $telefono = $mysqli->real_escape_string($_POST['telefono']);
+      $gustos = $mysqli->real_escape_string($_POST['gustos']);
+    // consulta para insertar a bd
+      $sql = "INSERT INTO registro (Nombre , Email , Telefono , Gustos) VALUES ('$nombre','$email','$telefono','$gustos')";
+      $resulta = $mysqli->query($sql);
+      }
+    $mysqli->close();
+ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,17 +64,38 @@
 		<div class="nav-wraper">
 			<div class="navbar">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link active" href="index.html"><img src="img/header/nav-icon1.png" alt=""> Inicio</a></li>
+					<li class="nav-item"><a class="nav-link active" href="index.php"><img src="img/header/nav-icon1.png" alt=""> Inicio</a></li>
 					<li class="nav-item"><a class="nav-link" href="acercade.html"><img src="img/header/nav-icon2.png" alt="">Nosotros</a></li>
-					<li class="nav-item"><a class="nav-link" href="menu.html"><img src="img/header/nav-icon13.png" alt="">Productos</a></li>
+					<li class="nav-item"><a class="nav-link" href="menu.php"><img src="img/header/nav-icon13.png" alt="">Productos</a></li>
 					<li class="nav-item"><a class="nav-link" href="galeria.html"><img src="img/header/nav-icon11.png" alt="">Galeria</a></li>
 					<li class="nav-item"><a class="nav-link" href="servicios.html"><img src="img/header/nav-icon5.png" alt="">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="loguin.html"><img src="img/header/nav-icon6.png" alt="">Admin.</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 	<!-- Termina el Menu -->
 	<div class="site-main">
+    <?php
+     if ($resulta >0) {
+          echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+               <strong>Registro Guardado</strong> Te enviaremos información de nuestras ofertas y noticias. Gracias Att. SantavacaCortesFinos
+               <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+               <span aria-hidden='true'>&times;</span>
+               </button>
+               </div>";
+          }
+          ?>
+          <?php
+           if ($resulta1 >0) {
+                echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                     <strong>Gracias por tus comentarios</strong>Att. SantavacaCortesFinos
+                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                     <span aria-hidden='true'>&times;</span>
+                     </button>
+                     </div>";
+                }
+                ?>
 		<!-- Inicia el Banner de inicio -->
 		<section class="home_banner_area">
 			<div class="banner_inner">
@@ -75,6 +113,16 @@
 				<div class="banner_content">
 					<div class="row d-flex align-items-center">
 						<div class="col-lg-10 col-md-16">
+            <!-- saludo segun la hora -->
+              <?php
+                      $date = date ("H");
+                      echo "<html><body>";
+                         if ($date < 12) echo "Buenos dias!";
+                         else if ($date < 18) echo "Buenas tardes!";
+                         else echo "Buenas noches!";
+                         echo "</body></html>";
+                ?>
+                <!-- termina el saludo -->
 							  <p class="top-text text-dark">Fabrica de cortes</p>
 							     <h1>SantaVaca Cortes Finos</h1>
 							       <p class="text-justify text-dark">Nuestros cortes finos provienen del norte de nuestro país
@@ -88,12 +136,12 @@
 								</div>
 					  </div><br>
 						<div class="banner-btn">
-							<a class="primary-btn align-self-end" href="acercade.html">Mas Información</a>
+							<a class="primary-btn align-self-end" href="acercade.html">Más Información</a>
 					 </div>
 						</div>
 			   </div>
 		</div>
-		<a class='flotante img-fluid' href="https://api.whatsapp.com/send?phone=5572380289" target="_blank"><img src='img/btnw.png' border="0" alt="whatsap"/></a>
+		<a class='flotante img-fluid' href="https://api.whatsapp.com/send?phone=5215572380289" target="_blank"><img src='img/btnw.png' border="0" alt="whatsap"/></a>
 		<div class="container">
 			<div class="col-md-12 col-lg-12">
       <img src="img/barra.png" class="img-fluid">
@@ -103,7 +151,7 @@
 		<!-- Inicia seccion de acordeon  -->
 		<hr>
     <section class="sec1">
-	        <h1 class="text-light text-center">Conoce mas sobre nuestros cortes.. </h1>
+	        <h1 class="text-light text-center">Conoce más sobre nuestros cortes.. </h1>
     </section>
     <section class="sec2">
          <div class="boxy">
@@ -144,7 +192,7 @@
 												<b>Tip 1. Grosor del corte:</b> El corte debe tener el mismo grosor en toda la pieza, para que de esta manera se cocine de manera uniforme y no queden pedazos más duros que otros. El grosor debe tener por lo menos 1 pulgada o 2 ½ cm, ya que un corte más delgado es más fácil cocinarlo de más. El tamaño ideal que la mayoría recomienda es 1 ½ pulgada o 3½ cm aproximadamente.</p>
 
 											<div class="banner-btn">
-												<a class="primary-btn align-self-end" href="servicios.html">Mas Información</a>
+												<a class="primary-btn align-self-end" href="servicios.html">Más Información</a>
 										 </div>
 										</div>
 							    </div>
@@ -162,7 +210,7 @@
 											<p class="text-justify">Existe gran variedad de cortes en el mercado de acuerdo a los gustos de cada comesal con hueso , sin hueso, marmoleado , con grasa si quieres
 											saber cual de estos cortes va mejor con tu personalidad dale clic al boton de mas Información para averiguarlo.</p>
 											<div class="banner-btn">
-												<a class="primary-btn align-self-end" href="servicios.html">Mas Información</a>
+												<a class="primary-btn align-self-end" href="servicios.html">Más Información</a>
 										 </div>
 										</div>
 							    </div>
@@ -183,7 +231,7 @@
 		<!--- Incia seccion horizontal -->
 		<section class="diagonal">
           <div class="container">
-              <h1 class="text-center text-light"> Nuestros Clientes</h1>
+              <h1 class="text-center text-light"> No vendemos solo carne, disfrutamos atenderte.</h1>
           </div>
     </section>
 		<!-- termina seccion horizontal -->
@@ -205,7 +253,7 @@
                           <p class="text-justify">Tenemos el conocimiento para ofrecerte lo mejor a tu gusto y necesidad. Dinos qué es lo que se te antoja y te ofreceremos
                           tu corte ideal acompañado de el mejor vino para maridar.</p>
                   <li>Servicio en nuestro Grill :</li>
-                          <p class="text-justify">No quieres asar en tu casa?  los dias sabados tenemos un lugar para que disfrutes de todo el sabor de nuestros cortes.
+                          <p class="text-justify">No quieres asar en tu casa?  los dias <b>sabados y domingos</b> tenemos un lugar para que disfrutes de todo el sabor de nuestros cortes.
                             Asamos el corte que eligiste, te ofrecemos también ensaladas, jugo de carne, embutidos y todo preparado por nuestro Parrillero Experto.</p>
                  </ul>
 						</div>
@@ -222,39 +270,53 @@
 					<div class="col-lg-6 offset-lg-6">
 						<div class="contact-form-section">
 							<h1>Se parte de nuestras Ofertas</h1>
-							<p>Registrate</p>
-							<form class="contact-form-area contact-page-form contact-form text-right" id="myForm" action="<?php echo $_PHP['SELF']; ?>" method="post">
-								<div class="form-group col-md-12">
-									<input type="text" class="form-control" id="name" name="name" placeholder="Nombre" onfocus="this.placeholder = ''"
-									 onblur="this.placeholder = 'Nombre'">
-								</div>
-								<div class="form-group col-md-12">
-									<input type="email" class="form-control" id="email" name="email" placeholder="Dirección de Email" onfocus="this.placeholder = ''"
-									 onblur="this.placeholder = 'Dirección de Email'">
-								</div>
-								<div class="form-group col-md-12">
-									<input type="text" class="form-control" id="subject" name="subject" placeholder="Telefono" onfocus="this.placeholder = ''"
-									 onblur="this.placeholder = 'Telefono'">
-								</div>
-								<div class="form-group col-md-12">
-									<div class="form-select">
-										<select>
-											<option value="1">Cortes Americanos</option>
-											<option value="1">Cortes Argentinos</option>
-											<option value="1">Quesos</option>
-											<option value="1">Cortes y Quesos</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group col-md-12">
-									<input type="text" class="form-control" id="datepicker" name="text" placeholder="Fecha de Nacimiento" onfocus="this.placeholder = ''"
-									 onblur="this.placeholder = 'Fecha de Nacimiento'">
-								</div>
-								<div class="col-lg-12 text-center">
-									<button class="primary-btn text-uppercase">Registrar</button>
-								</div>
-							</form>
-						</div>
+							<p>Unete a nuestros Usuarios</p>
+							<p class="text-justify">Brindanos algunos de tus datos para poder enviarte todas nuestras ofertas y las noticias mas relevantes de Santavaca Cortes Finos.</p>
+              <!-- inicia modal para registro de usuarios -->
+              <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+                   <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                           <div class="modal-header text-center">
+                               <h4 class="modal-title w-100 font-weight-bold">Nuevo Registro</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                     </button>
+                           </div>
+                           <div class="modal-body mx-3">
+                           <div class="md-form mb-5">
+                           <form name="registro" id="registro" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+                                 <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
+                           </div>
+                           <div class="md-form mb-4">
+                                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" required/>
+                          </div>
+                          <div class="md-form mb-4">
+                                 <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Telefono" required/>
+                          </div>
+                          <div class="md-form mb-4">
+                                 <select name="gustos" id="gustos" class="select-custom" required/>
+                                  <option value="">Selecciona una opción</option>
+                                    <option value="Cortes Americanos">Cortes Americanos</option>
+                                    <option value="Cortes Argentinos">Cortes Argentinos</option>
+                                    <option value="Quesos">Quesos</option>
+                                 </select>
+                                 <small>Selecciona tus gustos de cortes</small>
+                          </div>
+                      </div>
+                       <div class="modal-footer d-flex justify-content-center">
+                          <input type="submit" name="submit" value="Registrar" class="btn btn-success">
+                       </div>
+                  </div>
+             </div>
+        </form>
+    </div>
+<div class="text-center">
+<a href="" class="btn btn-success btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">
+  Registrate</a>
+</div>
+<!-- termina el modal -->
+          	</div>
 					</div>
 				</div>
 			</div>
@@ -275,7 +337,7 @@
 							<p class="text-justify">En Santavaca Cortes Finos nos preocupamos por nuestros clientes
 								Disfruta tu corte de carne sin la necesidad de hacerlo en tu hogar los dias. Nosotros te preparamos tu corte en el punto exacto.</p>
 							<p class="text-justify">La experiencia de nuestro parrillero experto te brindara una sensación unica en tu paladar al probar el corte que elegiste. para despues llevartelo a casa y disfrutar de el.</p>
-              <p class="text-justify"><b>Nota:</b> Nuestro Grill esta disponible los dias Sabados.</p>
+              <p class="text-justify"><b>Nota:</b> Nuestro Grill esta disponible los dias <b>Sabados y Domingos.</b></p>
 							<img src="img/chef/signature.png" alt="">
 						</div>
 					</div>
@@ -432,16 +494,30 @@
        <h2 class="text-center text-light">Zona de enlaces Multimedia</h2>
 			 <hr>
 			 <p class="text-center text light">Si no cuentas con un Scan Qr dale <a href="https://qrbot.net/en/" target="blank" class="text-success"> Click aqui</a> y podas descargarlo en tu Movil.</p>
-			  <div class="col-md-12 col-lg-12 col-sm-12 align-self-end">
-			   <img src="img/Facebook.png" class="rounded float-left qr" alt="Like Facebook">
-				 <img src="img/Negocio.png" class="rounded float-left qr" alt="Negocio">
-				 <img src="img/Califica.png" class="rounded float-left qr" alt="Calificanos">
-				 <img src="img/ubicacion.png" class="rounded float-left qr" alt="Mapa googlemap">
-				 <img src="img/mi_cupon.png" class="rounded float-left qr" alt="dia del padre">
-				 <a href="http://m.me/santa.vaca.750"><img src="img/messenger.png" class="rounded float-left qr" alt="Messenger"></a>
-				 <img src="img/facebook1.png" class="rounded float-left qr" alt="Facebook" target="blank">
-       <p class="text-center text-light">Siguenos en facebook y chatea con nosotros dale click en el icono de messenger.</p>
-			 </div>
+			     <div class="col-md-12 col-lg-12 col-sm-12 align-self-end">
+			      <!-- qr para red -->
+              <div class="row rounded mx-auto d-block">
+                ​<picture>
+                   <source srcset="img/msn.png" type="image/svg+xml">
+                     <img src="img/msn.png" class="img-fluid img-thumbnail qr" alt="Mensaje tel" title="Envianos un Mensaje Directo">
+                </picture>
+                ​<picture>
+                   <source srcset="img/Facebook3.png" type="image/svg+xml">
+                   <img src="img/Facebook3.png" class="img-fluid img-thumbnail qr" alt="Qr de Facebook" title="Siguenos en Facebook">
+                </picture>
+                <picture>
+                   <source srcset="img/maps.png" type="image/svg+xml">
+                   <img src="img/maps.png" class="img-fluid img-thumbnail qr" alt="Qr Ubicación" title="Ubicación en Maps">
+                </picture>
+                <picture>
+                   <source srcset="img/email.png" type="image/svg+xml">
+                   <img src="img/email.png" class="img-fluid img-thumbnail qr" alt="Envianos un Email" title="Envianos un Email">
+                </picture>
+              </div><br>
+            <!-- termina  -->
+            <p class="text-center text-light">Escanea cada uno de estos codigos si quieres comunicarte con nosotros desde tu Telefono Movil. Optimizamos tu tiempo</p>
+            <h3 class="text-center">Santavaca Cortes Finos</h3>
+       </div>
     </div>
 		<!-- termina paralax -->
 		<!--================ Inicia contacto Area =================-->
@@ -468,13 +544,13 @@
 						</div>
 					</div>
 					<div class="col-lg-9">
-						<form class="row contact_form" action="mailto:contacto@santavacacortesfinos.com" method="POST" id="contactForm" enctype="text/plain">
+						<form class="row contact_form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" id="contactForm" enctype="text/plain">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" id="name" name="nombre" placeholder="Ingresa tu Nombre" required>
+									<input type="text" class="form-control" id="name" name="nombrec" placeholder="Ingresa tu Nombre" required>
 								</div>
 								<div class="form-group">
-									<input type="email" class="form-control" id="email" name="email" placeholder="Tu Email" required>
+									<input type="email" class="form-control" id="email" name="emailc" placeholder="Tu Email" required>
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto:" required>
@@ -486,7 +562,7 @@
 								</div>
 							</div>
 							<div class="col-md-12 text-right">
-								<button type="submit" value="submit" name="submit" class="primary-btn align-self-end">Enviar</button>
+								<button type="submit" value="enviar" name="enviar" class="primary-btn align-self-end">Enviar</button>
 							</div>
 						</form>
 					</div>

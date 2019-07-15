@@ -784,6 +784,8 @@ img.zoom {
   height: 160px;
   padding: 10px;
   margin: auto;
+  float:left;
+  position: relative;
 }
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -850,6 +852,7 @@ img.zoom {
     .breakfast-area.lunch-area .chef-title .c-desc p {
       text-transform: uppercase;
       font-size: 12px; }
+
 
 /*Termina estilo Lunch Area css
 ============================================================================================ */
@@ -1026,6 +1029,14 @@ img.zoom {
 
 /* Termiann estilos del Menu List Area css
 ============================================================================================ */
+.producto{
+  width: 300px;
+  height: 300px;
+}
+
+
+
+
 /*---------------------------------------------------- */
 /*-----------------Estilos del Blog Css----------------*/
 .latest_blog_area {
